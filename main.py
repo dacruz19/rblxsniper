@@ -21,7 +21,7 @@ async def checker(username):
                 print(Fore.RED + f"TAKEN/???: {username}" + Style.RESET_ALL)
 
 async def main():
-    with open("rblxusersnip/usernames.txt", "r") as file:
+    with open("usernames.txt", "r") as file:
         usernames = file.read().splitlines()
 
     tasks = [checker(username) for username in usernames]
