@@ -21,7 +21,7 @@ async def checker(username):
                 print(Fore.RED + f"TAKEN/???: {username}" + Style.RESET_ALL)
 
 async def main():
-    with open("usernames.txt", "r") as file:
+    with open("usernames.txt", "r") as file: #create your own file called usernames.txt with whatever inside it
         usernames = file.read().splitlines()
 
     tasks = [checker(username) for username in usernames]
